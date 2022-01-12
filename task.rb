@@ -5,7 +5,7 @@ def q1
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-  names.push("齋藤")
+  names << "齋藤"
   print names
 
 end
@@ -54,6 +54,12 @@ def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
+  numbers2 = []
+  numbers1.each_index do |i|
+    numbers2 << (numbers1[i] * 10)
+  end
+
+  puts numbers2
 
 end
 
@@ -61,6 +67,9 @@ def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
+  array.each_index do |i|
+    array[i] = array[i].to_i
+  end
 
   # 以下は変更しないで下さい
   p array
@@ -71,6 +80,18 @@ def q8
 
   # 以下に回答を記載
 
+  # 先頭のみ大文字に
+  programming_languages.each_index do |i|
+    programming_languages[i] = programming_languages[i].capitalize
+  end
+
+  # b全て大文字に
+  upper_case_programming_languages = []
+
+  programming_languages.each do |prg_lang|
+    upper_case_programming_languages.push(prg_lang.upcase)
+  end
+
   # 以下は変更しないで下さい
   p programming_languages
   p upper_case_programming_languages
@@ -80,6 +101,9 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
+  names.each.with_index(1) do |name, i|
+    puts "会員No.#{i} #{name}さん"
+  end
 
 end
 
@@ -87,6 +111,13 @@ def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
+  foods.each do |food|
+    if food.include?("うに")
+      puts "好物です"
+    else
+      puts "まぁまぁ好きです"
+    end
+  end
 
 end
 
