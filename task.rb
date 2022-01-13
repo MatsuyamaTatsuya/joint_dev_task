@@ -54,10 +54,7 @@ def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-  numbers2 = []
-  numbers1.each_index do |i|
-    numbers2 << (numbers1[i] * 10)
-  end
+  numbers2 = numbers1.map { |num| num * 10 }
 
   puts numbers2
 
@@ -67,9 +64,7 @@ def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-  array.each_index do |i|
-    array[i] = array[i].to_i
-  end
+  array.map! { |num| num.to_i }
 
   # 以下は変更しないで下さい
   p array
@@ -81,16 +76,10 @@ def q8
   # 以下に回答を記載
 
   # 先頭のみ大文字に
-  programming_languages.each_index do |i|
-    programming_languages[i] = programming_languages[i].capitalize
-  end
+  programming_languages.map! { |prg_lang| prg_lang.capitalize }
 
-  # b全て大文字に
-  upper_case_programming_languages = []
-
-  programming_languages.each do |prg_lang|
-    upper_case_programming_languages.push(prg_lang.upcase)
-  end
+  # 全て大文字に
+  upper_case_programming_languages = programming_languages.map { |prg_lang| prg_lang.upcase}
 
   # 以下は変更しないで下さい
   p programming_languages
