@@ -64,7 +64,7 @@ def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-  array.map! { |num| num.to_i }
+  array.map!(&:to_i)
 
   # 以下は変更しないで下さい
   p array
@@ -76,7 +76,7 @@ def q8
   # 以下に回答を記載
 
   # 先頭のみ大文字に
-  programming_languages.map! { |prg_lang| prg_lang.capitalize }
+  programming_languages.map!(&:capitalize)
 
   # 全て大文字に
   upper_case_programming_languages = programming_languages.map { |prg_lang| prg_lang.upcase}
