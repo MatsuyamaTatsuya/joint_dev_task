@@ -176,6 +176,9 @@ def q16
   ]
 
   # 以下に回答を記載
+  users.each do |person|
+    puts "私の名前は#{person[:name]}です。年齢は#{person[:age]}歳です"
+  end
 
 end
 
